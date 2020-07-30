@@ -113,6 +113,7 @@
             this.Close.Size = new System.Drawing.Size(18, 18);
             this.Close.TabIndex = 6;
             this.Close.TabStop = false;
+            this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
             // Icon
             // 

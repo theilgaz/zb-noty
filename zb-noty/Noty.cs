@@ -122,6 +122,12 @@ namespace zb_noty
             BackColor = Color.FromArgb(red, green, blue);
         }
 
+        private void Close_Click(object sender, EventArgs e)
+        {
+            timer.Interval = 1;
+            _action = ActionKind.Close;
+        }
+
         public void SetBorderColor(int red, int green, int blue)
         {
             BorderLeft.BackColor = Color.FromArgb(red, green, blue);
