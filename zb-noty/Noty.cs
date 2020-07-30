@@ -54,7 +54,7 @@ namespace zb_noty
 
             for (int i = 1; i < 10; i++)
             {
-                instance = "alert" + i.ToString();
+                instance = "noty" + i.ToString();
                 Noty f = (Noty)Application.OpenForms[instance];
 
                 if (f == null)
