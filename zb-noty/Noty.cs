@@ -110,7 +110,7 @@ namespace zb_noty
                     SetBorderColor(74, 137, 220); // hover
                     break;
             }
-            
+
             Show();
             _action = ActionKind.Start;
             timer.Interval = 1;
@@ -126,6 +126,45 @@ namespace zb_noty
         {
             timer.Interval = 1;
             _action = ActionKind.Close;
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+
+            switch (_action)
+            {
+                case ActionKind.Wait:
+                    timer.Interval = 5000;
+                    _action = ActionKind.Close;
+                    break;
+                case ActionKind.Start:
+                    timer.Interval = 1;
+                    Opacity += 0.1;
+                    if (_x < Location.X)
+                    {
+                        Left--;
+                    }
+                    else
+                    {
+                        if (Opacity == 1.0)
+                        {
+                            _action = ActionKind.Wait;
+                        }
+                    }
+                    break;
+                case ActionKind.Close:
+                    timer.Interval = 1;
+                    Opacity -= 0.1;
+
+                    Left -= 3;
+                    if (base.Opacity == 0.0)
+                    {
+                        base.Close();
+                    }
+                    break;
+                default:
+                    break;
+            }
         }
 
         public void SetBorderColor(int red, int green, int blue)

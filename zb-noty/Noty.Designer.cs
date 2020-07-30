@@ -124,6 +124,10 @@
             this.Icon.TabIndex = 7;
             this.Icon.TabStop = false;
             // 
+            // timer
+            // 
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
             // Noty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
