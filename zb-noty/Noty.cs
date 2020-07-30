@@ -10,6 +10,14 @@ using System.Windows.Forms;
 
 namespace zb_noty
 {
+    public enum AlertKind
+    {
+        Success,
+        Info,
+        Warning,
+        Error
+    }
+
     public partial class Noty : Form
     {
         public Noty()
