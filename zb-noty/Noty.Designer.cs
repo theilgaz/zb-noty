@@ -34,10 +34,10 @@
             this.BorderBottom = new System.Windows.Forms.Panel();
             this.BorderRight = new System.Windows.Forms.Panel();
             this.Message = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.Close = new System.Windows.Forms.PictureBox();
+            this.Icon = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.Close)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Icon)).BeginInit();
             this.SuspendLayout();
             // 
             // BorderLeft
@@ -103,23 +103,23 @@
             this.Message.TabIndex = 5;
             this.Message.Text = "Kayıt işlemi başarılı bir şekilde tamamlandı.";
             // 
-            // pictureBox1
+            // Close
             // 
-            this.pictureBox1.Image = global::zb_noty.Properties.Resources.close;
-            this.pictureBox1.Location = new System.Drawing.Point(350, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(18, 18);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.Close.Image = global::zb_noty.Properties.Resources.close;
+            this.Close.Location = new System.Drawing.Point(350, 26);
+            this.Close.Name = "Close";
+            this.Close.Size = new System.Drawing.Size(18, 18);
+            this.Close.TabIndex = 6;
+            this.Close.TabStop = false;
             // 
-            // pictureBox2
+            // Icon
             // 
-            this.pictureBox2.Image = global::zb_noty.Properties.Resources.success;
-            this.pictureBox2.Location = new System.Drawing.Point(14, 21);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(28, 28);
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
+            this.Icon.Image = global::zb_noty.Properties.Resources.success;
+            this.Icon.Location = new System.Drawing.Point(14, 21);
+            this.Icon.Name = "Icon";
+            this.Icon.Size = new System.Drawing.Size(28, 28);
+            this.Icon.TabIndex = 7;
+            this.Icon.TabStop = false;
             // 
             // Noty
             // 
@@ -128,8 +128,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(212)))), ((int)(((byte)(104)))));
             this.ClientSize = new System.Drawing.Size(380, 70);
             this.ControlBox = false;
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.Icon);
+            this.Controls.Add(this.Close);
             this.Controls.Add(this.Message);
             this.Controls.Add(this.BorderRight);
             this.Controls.Add(this.BorderBottom);
@@ -144,8 +144,8 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Close)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Icon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,8 +159,8 @@
         private System.Windows.Forms.Panel BorderBottom;
         private System.Windows.Forms.Panel BorderRight;
         private System.Windows.Forms.Label Message;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox Close;
+        private System.Windows.Forms.PictureBox Icon;
     }
 }
 
