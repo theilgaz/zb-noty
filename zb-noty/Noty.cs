@@ -18,6 +18,13 @@ namespace zb_noty
         Error
     }
 
+    public enum ActionKind
+    {
+        Wait,
+        Start,
+        Close
+    }
+
     public partial class Noty : Form
     {
         public Noty()
