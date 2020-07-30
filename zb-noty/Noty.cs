@@ -104,6 +104,11 @@ namespace zb_noty
                     SetBackColor(237, 85, 101); // grapefruit
                     SetBorderColor(218, 68, 83); // hover
                     break;
+                case AlertKind.Reminder:
+                    Icon.Image = Resources.warning;
+                    SetBackColor(252, 110, 81); // grapefruit
+                    SetBorderColor(233, 87, 63); // hover
+                    break;
                 default:
                     Icon.Image = Resources.info;
                     SetBackColor(93, 156, 236); // blue jeans
