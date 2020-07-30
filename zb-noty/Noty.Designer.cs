@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.BorderLeft = new System.Windows.Forms.Panel();
             this.Caption = new System.Windows.Forms.Label();
             this.BorderTop = new System.Windows.Forms.Panel();
@@ -36,6 +37,7 @@
             this.Message = new System.Windows.Forms.Label();
             this.Close = new System.Windows.Forms.PictureBox();
             this.Icon = new System.Windows.Forms.PictureBox();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Icon)).BeginInit();
             this.SuspendLayout();
@@ -161,6 +163,7 @@
         private System.Windows.Forms.Label Message;
         private System.Windows.Forms.PictureBox Close;
         private System.Windows.Forms.PictureBox Icon;
+        private System.Windows.Forms.Timer timer;
     }
 }
 

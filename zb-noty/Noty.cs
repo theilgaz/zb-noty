@@ -113,8 +113,8 @@ namespace zb_noty
             
             Show();
             _action = ActionKind.Start;
-            this.Timer1.Interval = 1;
-            this.Timer1.Start();
+            timer.Interval = 1;
+            timer.Start();
         }
 
         public void SetBackColor(int red, int green, int blue)
