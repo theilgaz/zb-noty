@@ -16,7 +16,7 @@ namespace zb_noty
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Noty());
+            Application.Run(new NotyExample());
         }
     }
 }
