@@ -104,7 +104,7 @@ namespace zb_noty
                     Icon.Image = Resources.warning;
                     SetBackColor(255, 206, 84); // sunflower
                     SetBorderColor(252, 187, 66); // hover
-                    SetCaptionColor(194, 129, 10); 
+                    SetCaptionColor(161, 107, 10); 
                     break;
                 case AlertKind.Error:
                     Icon.Image = Resources.error;
