@@ -56,7 +56,7 @@
             // 
             this.Caption.AutoSize = true;
             this.Caption.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Caption.ForeColor = System.Drawing.Color.White;
+            this.Caption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Caption.Location = new System.Drawing.Point(53, 12);
             this.Caption.Name = "Caption";
             this.Caption.Size = new System.Drawing.Size(111, 21);
@@ -98,7 +98,7 @@
             // 
             this.Message.AutoSize = true;
             this.Message.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Message.ForeColor = System.Drawing.Color.White;
+            this.Message.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Message.Location = new System.Drawing.Point(54, 40);
             this.Message.Name = "Message";
             this.Message.Size = new System.Drawing.Size(258, 17);

@@ -31,9 +31,10 @@ namespace zb_noty
 
     interface INoty
     {
-        void Alert(string message, AlertKind alertKind = AlertKind.Primary);
+        void Alert(string caption, string message, AlertKind alertKind = AlertKind.Primary);
         void SetBackColor(int red, int green, int blue);
         void SetBorderColor(int red, int green, int blue);
+        void SetCaptionColor(int red, int green, int blue);
     }
 
     public partial class Noty : Form, INoty
@@ -45,7 +46,7 @@ namespace zb_noty
             InitializeComponent();
         }
 
-        public void Alert(string message, AlertKind alertKind = AlertKind.Primary)
+        public void Alert(string caption, string message = "", AlertKind alertKind = AlertKind.Primary)
         {
 
             Opacity = 0.0;
@@ -70,7 +71,8 @@ namespace zb_noty
 
             _x = Screen.PrimaryScreen.WorkingArea.Width - base.Width - 5;
 
-            Caption.Text = message;
+            Caption.Text = caption;
+            Message.Text = message;
 
             switch (alertKind)
             {
@@ -78,41 +80,49 @@ namespace zb_noty
                     Icon.Image = Resources.info;
                     SetBackColor(93, 156, 236); // blue jeans
                     SetBorderColor(74, 137, 220); // hover
+                    SetCaptionColor(21, 61, 115);
                     break;
                 case AlertKind.Secondary:
                     Icon.Image = Resources.info;
                     SetBackColor(101, 109, 120); // dark gray
                     SetBorderColor(67, 74, 84); // hover
+                    SetCaptionColor(27, 30, 36); 
                     break;
                 case AlertKind.Success:
                     Icon.Image = Resources.success;
                     SetBackColor(160, 212, 104); // grass
                     SetBorderColor(140, 193, 82); // hover
+                    SetCaptionColor(49, 89, 5); 
                     break;
                 case AlertKind.Info:
                     Icon.Image = Resources.info;
                     SetBackColor(79, 193, 233); // aqua
                     SetBorderColor(59, 175, 218); // hover
+                    SetCaptionColor(12, 98, 130); 
                     break;
                 case AlertKind.Warning:
                     Icon.Image = Resources.warning;
                     SetBackColor(255, 206, 84); // sunflower
                     SetBorderColor(252, 187, 66); // hover
+                    SetCaptionColor(194, 129, 10); 
                     break;
                 case AlertKind.Error:
                     Icon.Image = Resources.error;
                     SetBackColor(237, 85, 101); // grapefruit
                     SetBorderColor(218, 68, 83); // hover
+                    SetCaptionColor(110, 21, 30); 
                     break;
                 case AlertKind.Reminder:
                     Icon.Image = Resources.warning;
                     SetBackColor(252, 110, 81); // grapefruit
                     SetBorderColor(233, 87, 63); // hover
+                    SetCaptionColor(135, 31, 14); 
                     break;
                 default:
                     Icon.Image = Resources.info;
                     SetBackColor(93, 156, 236); // blue jeans
                     SetBorderColor(74, 137, 220); // hover
+                    SetCaptionColor(32, 77, 138); 
                     break;
             }
 
@@ -179,5 +189,12 @@ namespace zb_noty
             BorderRight.BackColor = Color.FromArgb(red, green, blue);
             BorderBottom.BackColor = Color.FromArgb(red, green, blue);
         }
+
+        public void SetCaptionColor(int red, int green, int blue)
+        {
+            Caption.ForeColor = Color.FromArgb(red, green, blue);
+            Message.ForeColor = Color.FromArgb(red, green, blue);
+        }
+         
     }
 }

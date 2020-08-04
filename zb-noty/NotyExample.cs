@@ -17,45 +17,45 @@ namespace zb_noty
             InitializeComponent();
         }
 
-        public void Alert(string message, AlertKind alertKind)
+        public void Alert(string caption, string message, AlertKind alertKind)
         {
             Noty n = new Noty();
-            n.Alert(message, alertKind);
+            n.Alert(caption, message, alertKind);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Alert("İşlem başarılı", AlertKind.Success);
+            Alert("İşlem başarılı","Kayıt işlemi başarılı bir şekilde tamamlandı.", AlertKind.Success);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Alert("Hay aksi! Bir hata oluştu.", AlertKind.Error);
+            Alert("Hay aksi!","Bir hata oluştu.", AlertKind.Error);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Alert("Tüm verilerden emin olun.", AlertKind.Warning);
+            Alert("Uyarı", "Tüm verilerden emin olun.", AlertKind.Warning);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Alert("Bilgi mesajı", AlertKind.Info);
+            Alert("Bilgi", "Bilgi mesajı", AlertKind.Info);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Alert("Birincil arkaplan değeri testidir.", AlertKind.Primary);
+            Alert("Bilgi","Birincil arkaplan değeri testidir.", AlertKind.Primary);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Alert("İkincil arkaplan değeri testidir.", AlertKind.Secondary);
+            Alert("Bilgi","İkincil arkaplan değeri testidir.", AlertKind.Secondary);
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Alert("İpucu değeri testidir.", AlertKind.Reminder);
+            Alert("Bilgi","İpucu değeri testidir.", AlertKind.Reminder);
         }
     }
 }
